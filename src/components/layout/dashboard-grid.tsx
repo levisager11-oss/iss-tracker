@@ -41,21 +41,21 @@ export function DashboardGrid({
         >
             {/* Hero Section: Map (Takes up ~60% width on Desktop) */}
             <motion.section variants={itemVariants} className="col-span-1 lg:col-span-8 flex flex-col gap-4">
-                <div className="flex-1 min-h-[400px] border border-border-subtle rounded-lg bg-surface-base/50 relative overflow-hidden group hover:border-brand-cyan/30 transition-colors">
+                <div className="flex-1 min-h-[400px] border border-border-subtle/50 rounded-xl bg-surface-base/50 relative overflow-hidden group hover:border-brand-cyan/30 transition-colors shadow-2xl">
                     {mapParam}
                 </div>
             </motion.section>
 
             {/* Sidebar: Data Panels (Takes up ~40% width on Desktop) */}
             <motion.section variants={itemVariants} className="col-span-1 lg:col-span-4 flex flex-col gap-4 h-full overflow-y-auto lg:overflow-visible">
-                <div className="flex-1 min-h-[200px] border border-border-subtle rounded-lg bg-surface-elevated/30 p-4 hover:border-brand-cyan/30 transition-colors">
-                    {crewPanel}
-                </div>
-                <div className="flex-[1.5] min-h-[250px] border border-border-subtle rounded-lg bg-surface-elevated/30 p-4 hover:border-brand-cyan/30 transition-colors">
+                <div className="flex-[1.5] min-h-[200px] border border-border-subtle/50 rounded-xl bg-surface-elevated/30 p-4 backdrop-blur-md hover:border-brand-cyan/30 transition-colors shadow-lg">
                     {telemetryPanel}
                 </div>
-                <div className="flex-1 min-h-[200px] border border-border-subtle rounded-lg bg-surface-elevated/30 p-4 hover:border-brand-cyan/30 transition-colors">
+                <div className="flex-[1.5] min-h-[250px] border border-border-subtle/50 rounded-xl bg-surface-elevated/30 p-4 backdrop-blur-md hover:border-brand-cyan/30 transition-colors shadow-lg">
                     {passesPanel}
+                </div>
+                <div className="flex-1 min-h-[200px] border border-border-subtle/50 rounded-xl bg-surface-elevated/30 p-4 backdrop-blur-md hover:border-brand-cyan/30 transition-colors shadow-lg">
+                    {crewPanel}
                 </div>
             </motion.section>
         </motion.main>
